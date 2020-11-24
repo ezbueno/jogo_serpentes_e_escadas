@@ -1,1 +1,3 @@
-# jogo_serpentes_e_escadas
+Desenvolvimento do jogo Serpentes e Escadas
+
+Linguagem utilizada: Java
