@@ -3,7 +3,7 @@ package serpenteseescadas;
 public class Counters implements Printable {
 	
 	private Counter[] counters;
-	private int currentCounterIndex;
+	private int currentCounterIndex = -1;
 	
 	public Counters(Board board, int numPlayers) {
 		counters = new Counter[numPlayers];
@@ -15,6 +15,11 @@ public class Counters implements Printable {
 		}
 		
 		board.setupCounters(counters);
+	}
+	
+	public Counter next() {
+		currentCounterIndex = (currentCounterIndex + 1) % counters.length;
+		return counters[currentCounterIndex];
 	}
 
 	@Override
